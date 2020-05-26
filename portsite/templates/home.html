@@ -5,21 +5,19 @@
 	<title>Home</title>
 
 	<body>
-		<img src="{% static 'images/logo.png' %}" alt="test" class="logo">
-
 		<ul>
-			<li><a href="#home">Home</a></li>
-			<li><a href="#news">News</a></li>
+			<li><a href="#home" class="active">Home</a></li>
+			<li><a href="#projects">Projects</a></li>
 			<li><a href="#contact">Contact</a></li>
 			<li><a href="#about">About</a></li>
 		</ul>
 
+		<div class="main">
+			<img src="{% static 'images/logo.png' %}" alt="test" class="logo">
+			<img src="{% static 'images/text1.png' %}" alt="test" class="text1">
 
-
-
-		<h1>Welcome to my portfolio.</h1>
-		<p>This is a paragraph</p>
-
+			
+		</div>
 
 	</body>
 </html>

@@ -1,13 +1,14 @@
 body {
-  background-color: ghostwhite;
+  background-color: white;
 }
 
-h1 {
+/*h1 {
   color: black;
   text-align: center;
   font-family: tahoma;
   font-size: 20;
-}
+  transform: translate(0%, -130%);
+}*/
 
 p {
 	color: blue;
@@ -21,8 +22,47 @@ p {
 	width: 50%;
 }
 
+.text1 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25%;
+	transform: translate(0%, -70%);
+}
+
 ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #f1f1f1;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: center;
+  font-family: tahoma;
+}
+
+/* link color change on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.active {
+  background-color: #e0b816;
+  color: white;
+}
+
+.main {
+	transform: translate(18%, 0%);
+	/*background-color: white;*/
+	width: 85%;
 }
