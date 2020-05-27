@@ -31,7 +31,7 @@ SECRET_KEY = 'x0i4b%iks@-^pi&zmtglc1!1*v+xj(8y0r%mn431#c(4^uj5b2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['eivydas.com']
 
 
 # Application definition
