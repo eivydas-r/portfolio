@@ -8,3 +8,9 @@ def home(request):
 	#return HttpResponse('<p>home view</p>')
 	#projects = Project.objects.all()
 	return render(request, 'home.html')
+
+def resume(request):
+	return render(request, 'resume.html')
+
+def about(request):
+	return render(request, 'about.html')
