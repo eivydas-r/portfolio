@@ -5,15 +5,15 @@ body {
 h1 {
 	color: black;
 	text-align: left;
-	font-family: tahoma;
+	font-family: helvetica;
 	font-size: 30;
 	margin-left: 100;
 }
 
 p {
 	color: black;
-	font-family: tahoma;
-	font-size: 25;
+	font-family: helvetica;
+	font-size: 27;
 	text-align: left;
 	margin-left: 100;
 	margin-right: 100;
@@ -24,6 +24,7 @@ p {
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
+	margin-top: 0;
 }
 
 .img1 {
@@ -86,6 +87,20 @@ p {
   background-color: #f2f2f2;
 }
 
+.box4 {
+
+  width: 900px;
+  height: 460px;
+  border: 0px solid white;
+  padding: 0px;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25;
+  text-align: center;
+  background-color: #fffff0;
+}
+
 span {
   display: inline;
   vertical-align: text-bottom;
@@ -127,7 +142,7 @@ p.p3 {
 	margin-left: auto;
 	margin-right: auto;
 	width: 25%;
-	transform: translate(0%, -70%);
+	transform: translate(0%, -90%);
 }
 
 .text2 {
@@ -137,6 +152,15 @@ p.p3 {
 	width: 25%;
 	transform: translate(0%, 50%);
 }
+
+.text3 {
+	display: inline-block;
+	width: 1000;
+	margin-left: -20;
+	margin-right: auto;
+	margin-top: 42;
+}
+
 
 .resume {
 	margin-left: auto;
@@ -202,6 +226,15 @@ div.shadow {
 	margin-left: auto;
 	margin-right: auto;
 	width: 800;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.shadow2 {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25;
+	width: 900;
+	height: 460;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
