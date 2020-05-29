@@ -14,3 +14,7 @@ def resume(request):
 
 def about(request):
 	return render(request, 'about.html')
+
+def projects(request):
+	projs = Project.objects.all()
+	return render(request, 'projects.html', {'projs' : projs})

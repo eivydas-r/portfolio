@@ -1,4 +1,5 @@
 {% load static %}
+{% load tag %}
 
 <!-- Hi! If you're reading this then maybe I could make a good fit in your company. I'm currently looking for work, so feel free to contact me for more info!  -Eivydas   -->
 <html>
@@ -6,8 +7,8 @@
 	<title>Home | eivydas.com</title>
 	<body oncontextmenu="return false;">
 		<ul>
-			<li><a href="/" class="active">Home</a></li>
-			<li><a href="/projects">Projects</a></li>
+			<li><a href="/">Home</a></li>
+			<li><a href="/projects" class="active">Projects</a></li>
 			<li><a href="/resume">Resume</a></li>
 			<li><a href="/about">About</a></li>
 			<li><a href="#contact">Contact</a></li>
@@ -20,20 +21,19 @@
 			</div>
 
 			<div class="fade-in2">
-				<div class="shadow2">
-					<div class="box4">
+				<p class="p4">Everything on this page is generated from data extracted from my SQLite project database.</p>
+
+				{% for proj in projs %}
+				<div class="shadow3" style="height: {% length proj.description %};">
+					<div class="box5" style="height: {% length proj.description %};">
 						<div class="text3">
-							<h1>Welcome!</h1>
-							<p>This site was made from scratch with
-							<a href="https://www.djangoproject.com/" target="_blank">Django</a> and <a href="https://www.python.org/" target="_blank">Python</a> for backend, and HTML and CSS for frontend.
-							See the code <a href="https://github.com/eivydas-r/portfolio" target="_blank">here</a>.
-							</p>
-							<p>I'm currently pursuing summer internships or other full time positions for web development or software engineering.</p>
-							<p>I have an eye for <em>quality</em>, if you hire me you can expect only the <u>best</u>. Feel free to look around!</p>
-							<p>- Eivydas</p>
+							<h1>{{ proj.name }}</h1>
+							<p class="p5">{{ proj.project_date }}</p>
+							<p style="width: 760;">{{ proj.description }}</p>
 						</div>
 					</div>
 				</div>
+				{% endfor %}
 			</div>
 		</div>
 	</body>
