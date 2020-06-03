@@ -18,3 +18,6 @@ def about(request):
 def projects(request):
 	projs = Project.objects.all()
 	return render(request, 'projects.html', {'projs' : projs})
+
+def contact(request):
+	return render(request, 'contact.html')

@@ -1,17 +1,16 @@
 {% load static %}
-{% load tag %}
 
 <!-- Hi! If you're reading this then maybe I could make a good fit in your company. I'm currently looking for work, so feel free to contact me for more info!  -Eivydas   -->
 <html>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
-	<title>Projects | eivydas.com</title>
+	<title>Contact | eivydas.com</title>
 	<body oncontextmenu="return false;">
 		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/projects" class="active">Projects</a></li>
+			<li><a href="/" class="active">Home</a></li>
+			<li><a href="/projects">Projects</a></li>
 			<li><a href="/resume">Resume</a></li>
 			<li><a href="/about">About</a></li>
-			<li><a href="/contact">Contact</a></li>
+			<li><a href="/contact" class="active">Contact</a></li>
 		</ul>
 
 		<div class="main">
@@ -21,19 +20,14 @@
 			</div>
 
 			<div class="fade-in2">
-				<p class="p4">Everything on this page is generated from data extracted from my SQLite project database.</p>
-
-				{% for proj in projs %}
-				<div class="shadow3" style="height: {% length proj.description %};">
-					<div class="box5" style="height: {% length proj.description %};">
-						<div class="text3">
-							<h1>{{ proj.name }}</h1>
-							<p class="p5">{{ proj.project_date }}</p>
-							<p style="width: 760;">{{ proj.description }}</p>
+				<div class="shadow4">
+					<div class="box9">
+						<div class="text4">
+							<h1 style="text-align: center; transform: translate(-17%, 0%);">Contact</h1>
+							<p style="text-align: center; transform: translate(-7%, -60%);">📧 erauly2@uic.edu</p>
 						</div>
 					</div>
 				</div>
-				{% endfor %}
 			</div>
 		</div>
 	</body>

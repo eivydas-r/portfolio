@@ -160,6 +160,19 @@ p {
   background-color: #f2f2f2;
 }
 
+.box9 {
+  width: 400px;
+  height: 200px;
+  border: 0px solid white;
+  padding: 0px;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100;
+  text-align: center;
+  background-color: #c2fffb;
+}
+
 span {
   display: inline;
   vertical-align: text-bottom;
@@ -273,6 +286,14 @@ p.p8 {
 	margin-top: 42;
 }
 
+.text4 {
+	display: inline-block;
+	width: 450;
+	margin-left: -20;
+	margin-right: auto;
+	margin-top: 42;
+}
+
 
 .resume {
 	margin-left: auto;
@@ -361,6 +382,15 @@ div.shadow3 {
 	margin-top: 25;
 	width: 900;
 	height: 250;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.shadow4 {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 25;
+	width: 400;
+	height: 200;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
