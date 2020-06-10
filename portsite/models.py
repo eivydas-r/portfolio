@@ -5,6 +5,7 @@ class Project(models.Model):
 	name = models.CharField(max_length=100)
 	description = models.TextField(blank=True)
 	project_date = models.DateField(blank=True, null=True)
+	URL_link = models.TextField(blank=True)
 
 	#project = this.objects.get(id=1)
 	#if project.id == 1:
@@ -24,7 +25,7 @@ class Details(models.Model):
 			#print("Not found, detail_id: " + str(self.detail_id))
 			project = Project.objects.get(id=self.detail_id)
 			print("detail_id: " + str(self.detail_id) + " ... project id: " + str(project.id))
-			
+
 			if self.detail_id == project.id:
 				return "Detail " + str(self.detail_id) + ": " + str(self.description) + str(project.id)
 			else:
