@@ -21,3 +21,25 @@ def projects(request):
 
 def contact(request):
 	return render(request, 'contact.html')
+
+
+import re
+
+def mobile(request):
+    MOBILE_AGENT_RE=re.compile(r".*(iphone|mobile|androidtouch)",re.IGNORECASE)
+
+    if MOBILE_AGENT_RE.match(request.META['HTTP_USER_AGENT']):
+        return True
+    else:
+        return False
+
+def myfunction(request):
+    if mobile(request):
+        is_mobile = True
+    else:
+        is_mobile = False
+
+    context = {
+        'is_mobile': is_mobile,
+    }
+    return render(request, 'contact.html', context)
