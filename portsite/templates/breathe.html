@@ -60,9 +60,18 @@ function loop(){
     }).fadeIn(5000); // changes delay
 }
 
+function showQuote(){
+	var quote = $("p.quote");
+	quote.text("Be the change that you wish to see in the world. - Mahatma Gandhi");
+	quote.delay(5000).fadeIn(3000);
+	quote.delay(20000).fadeOut(2000);
+}
+
 $(document).ready(function(){
 	var text1 = $("p.center1");
+	var quote = $("p.quote");
 	text1.fadeOut(1);
+	quote.fadeOut(1);
 	text1.fadeIn(2000);
 	$(".button1").click(function(){
 		$(".button1").fadeOut();
@@ -73,7 +82,7 @@ $(document).ready(function(){
 		text1.delay(1000).fadeOut(2000)
 		//text1.css("font-size","200%");
 
-		for (var i = 0; i < 1; i++) {
+		for (var i = 0; i < 3; i++) {
 			loop();
 		}
 
@@ -81,23 +90,11 @@ $(document).ready(function(){
 		.delay(100)
 		.queue(function(n) {
 			$(this).text("you did great.");
-			$(this).delay(2000).fadeOut(2000);
+			$(this).delay(1000).fadeOut(2000);
 			circle.fadeOut(2000);
+			showQuote();
 			n();
-		}).fadeIn(2000);
-
-		var quote = $("p.quote");
-
-		//quote.fadeOut(2000)
-		//.delay(100)
-		//.queue(function(n) {
-		//	$(this).text("you did great.");
-		//	$(this).delay(2000).fadeOut(2000);
-		//	circle.fadeOut(2000);
-		//	n();
-		//}).fadeIn(2000);
-
-
+		}).fadeIn(3000);
 	});
 });
 
@@ -181,7 +178,7 @@ $(document).ready(function(){
 
 <div class="div1">
 	<p class="center1">let's breathe together.</p>
-	
+	<p class="quote">This is a quote. -Someone</p>
 
 	<div id ="container1">
 		<div id ="animation1"></div>
