@@ -325,7 +325,10 @@ li a {
 	font-size: 20;
 }
 
-/* link color change on hover */
+.projBar {
+	border-top: 8px solid #f0e1a5 !important;
+}
+
 li a:hover {
 	background-color: #555;
 	color: #fffbeb;
