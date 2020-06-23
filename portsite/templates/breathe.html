@@ -69,7 +69,7 @@ function showQuote(){
 	quote.fadeOut(2000)
 	.delay(100)
 	.queue(function(n) {
-		window.location.replace("http://localhost:8000/breathe/"); //http://www.eivydas.com/breathe/
+		window.location.replace("http://www.eivydas.com/breathe/");
 		n();
 	}).fadeIn(3000);
 
@@ -202,7 +202,7 @@ $(document).ready(function(){
 	}
 </style>
 
-<body>
+<body oncontextmenu="return false;">
 <div class="div1">
 	<p class="center1">let's breathe together.</p>
 	<p class="quote">This is a quote. -Someone</p>
