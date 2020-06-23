@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 
 <html class="no-js">
@@ -5,11 +7,12 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+
+// Main repeating animation loop
 function loop(){
 	var text1 = $("p.center1");
 	var circle = $("#animation1");
 
-	//text1.fadeIn(2000);
 	circle.delay(1000).animate({height: '10px', width: '10px', left: '195px', top: '195px'}, 2000);
 
 	text1.fadeOut(2000)
@@ -21,10 +24,6 @@ function loop(){
 
 	circle.animate({height: '10px', width: '10px', left: '195px', top: '195px'}, 1000);
 
-	//window.setTimeout(function () {
-	//	text1.text("breathe in.");
-	//}, 2500);
-
 	text1.fadeOut(2000)
     .delay(100)
     .queue(function(n) {
@@ -32,25 +31,9 @@ function loop(){
         n();
     }).fadeIn(2000); // changes delay
 
-
-
-
 	circle.animate({height: '200px', width: '200px', left: '100px', top: '100px'}, 5000);
-
-	//text1.delay(2000).fadeOut(1000);
-	//window.setTimeout(function () {
-	//	text1.text("hold it in.");
-	//}, 8000);
-	//text1.fadeIn(2000);
-
-
-
 	circle.animate({height: '200px', width: '200px', left: '100px', top: '100px'}, 7000);
 	circle.animate({height: '10px', width: '10px', left: '195px', top: '195px'}, 5000);
-
-	//window.setTimeout(function () {
-	//	text1.text("slowly breathe out.");
-	//}, 15000);
 
 	text1.fadeOut(2000)
     .delay(2000) // this
@@ -60,6 +43,7 @@ function loop(){
     }).fadeIn(5000); // changes delay
 }
 
+// Show quote at the end
 function showQuote(){
 	var quote = $("p.quote");
 	quote.text('"Be the change that you wish to see in the world." - Mahatma Gandhi');
@@ -75,33 +59,36 @@ function showQuote(){
 
 }
 
+// Main Js
 $(document).ready(function(){
 	var cover = $("div.cover");
-	cover.fadeOut(10);
+	cover.fadeOut(1000);
 
 	var text1 = $("p.center1");
 	var quote = $("p.quote");
 	var btn = $(".button1");
 	var circle = $("#animation1");
 
-	btn.hide();
+	//btn.hide();
 	circle.hide();
 	text1.hide();
 	quote.hide();
-	btn.fadeIn(2000);
-
-	circle.delay(1000).fadeIn(2000);
+	//btn.fadeIn(2000);
 
 
 	text1.fadeIn(2000);
 	$(".button1").click(function(){
-		$(".button1").fadeOut();
 		var circle = $("#animation1");
+		var btn = $(".button1");
 		var text1 = $("p.center1");
+		//btn.css("pointer-events","none");
+		btn.removeClass("button1:hover");
 
-		//text1.fadeOut(1);
+		circle.delay(1000).fadeIn(2000);
+		btn.fadeOut(1000);
 		text1.delay(1000).fadeOut(2000)
 		//text1.css("font-size","200%");
+		//pointer-events:none;
 
 		for (var i = 0; i < 3; i++) {
 			loop();
@@ -129,6 +116,7 @@ $(document).ready(function(){
 		position: relative;
 		background: rgba(60, 60, 60, 0);
 	}
+
 	#animation1 {
 		width: 50px;
 		height: 50px;
@@ -141,18 +129,26 @@ $(document).ready(function(){
 	}
 
 	.button1 {
-		background-color: #4CAF50; /* Green */
+		background-color: #a1f5ff;
+		width: 150px;
 		border: none;
 		color: white;
 		padding: 20px;
 		text-align: center;
 		text-decoration: none;
+		color: #949494;
 		display: inline-block;
-		font-size: 16px;
+		font-size: 23px;
 		margin: 4px 2px;
 		cursor: pointer;
 		border-radius: 8px;
-		opacity: 100%;
+		opacity: 0.8;
+
+		transition: 0.6s;
+	}
+
+	.button1:hover {
+		opacity: 1;
 	}
 
 	div.div1 {
