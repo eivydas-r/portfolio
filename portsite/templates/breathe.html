@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html class="no-js">
 <title>Breathe. | eivydas.com</title>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -64,14 +64,35 @@ function showQuote(){
 	var quote = $("p.quote");
 	quote.text('"Be the change that you wish to see in the world." - Mahatma Gandhi');
 	quote.delay(5000).fadeIn(3000);
-	quote.delay(20000).fadeOut(2000);
+	quote.delay(6000).fadeOut(2000);
+
+	quote.fadeOut(2000)
+	.delay(100)
+	.queue(function(n) {
+		window.location.replace("http://localhost:8000/breathe/"); //http://www.eivydas.com/breathe/
+		n();
+	}).fadeIn(3000);
+
 }
 
 $(document).ready(function(){
+	var cover = $("div.cover");
+	cover.fadeOut(10);
+
 	var text1 = $("p.center1");
 	var quote = $("p.quote");
-	text1.fadeOut(1);
-	quote.fadeOut(1);
+	var btn = $(".button1");
+	var circle = $("#animation1");
+
+	btn.hide();
+	circle.hide();
+	text1.hide();
+	quote.hide();
+	btn.fadeIn(2000);
+
+	circle.delay(1000).fadeIn(2000);
+
+
 	text1.fadeIn(2000);
 	$(".button1").click(function(){
 		$(".button1").fadeOut();
@@ -151,6 +172,13 @@ $(document).ready(function(){
 		align-items: center;
 	}
 
+	div.cover {
+		width: 90%;
+		height: 90%;
+		background-color: white;
+		position: absolute;
+	}
+
 	p.center1 {
 		font-size: 250%;
 		font-family: tahoma;
@@ -175,7 +203,6 @@ $(document).ready(function(){
 </style>
 
 <body>
-
 <div class="div1">
 	<p class="center1">let's breathe together.</p>
 	<p class="quote">This is a quote. -Someone</p>
@@ -189,6 +216,9 @@ $(document).ready(function(){
 
 	</div>
 
+</div>
+
+<div class="cover">
 </div>
 
 </body>

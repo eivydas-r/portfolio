@@ -2,6 +2,10 @@ body {
   background-color: white;
 }
 
+html.no-js {
+	display: none;
+}
+
 h1 {
 	color: black;
 	text-align: left;
