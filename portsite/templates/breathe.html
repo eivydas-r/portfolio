@@ -20,11 +20,11 @@ function loop(){
 
 
 	text1.fadeOut(2000)
-	.delay(4000) // makes it appear earlier EDITED THIS
+	.delay(5000) // makes it appear earlier EDITED THIS
 	.queue(function(n) {
 		$(this).text("breathe in.");
 		n();
-	}).fadeIn(5000); // changes duration
+	}).fadeIn(4000); // changes duration
 
 	circle.animate({height: '10px', width: '10px', left: '195px', top: '195px'}, 1000);
 
@@ -89,10 +89,13 @@ $(document).ready(function(){
 		var btn = $(".button1");
 		var text1 = $("p.center1");
 		var text2 = $("p.center2");
+		var cover2 = $("div.cover2");
+
+		cover2.fadeIn(1000);
 
 		//btn.css("pointer-events","none");
 		btn.removeClass("button1:hover");
-		btn.fadeOut(1000);
+		//btn.fadeOut(1000);
 		//text1.delay(1000).fadeOut(2000)
 		//text1.css("font-size","200%");
 
@@ -101,6 +104,8 @@ $(document).ready(function(){
 		.delay(10) // makes it appear earlier
 		.queue(function(n) {
 			$("div.div1").css("transform","translate(0%, 0%)");
+			cover2.hide();
+			btn.hide();
 			n();
 		}); // changes duration
 		//pointer-events:none;
