@@ -11,5 +11,4 @@ def length(text, extra):
 @register.simple_tag
 def randomQuote():
 	quotes = Quote.objects.all()
-	print((random.choice(quotes)).quote)
 	return random.choice(quotes)
