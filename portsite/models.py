@@ -15,6 +15,11 @@ class Project(models.Model):
 	# image
 	# link/video
 
+class Quote(models.Model):
+	full_name = models.CharField(max_length=100, blank=False)
+	quote = models.TextField(blank=False)
+	
+
 class Details(models.Model):
 	detail_id = models.PositiveIntegerField(default=0)
 	order_number = models.PositiveIntegerField(default=0)

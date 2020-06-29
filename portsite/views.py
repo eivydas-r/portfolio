@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.http import Http404
 
 from .models import Project
+from .models import Quote
 
 def home(request):
 	#return HttpResponse('<p>home view</p>')
@@ -23,4 +24,5 @@ def contact(request):
 	return render(request, 'contact.html')
 
 def breathe(request):
-	return render(request, 'breathe.html')
+	quotes = Quote.objects.all()
+	return render(request, 'breathe.html',  {'quotes' : quotes})
