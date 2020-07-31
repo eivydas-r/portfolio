@@ -26,3 +26,6 @@ def contact(request):
 def breathe(request):
 	quotes = Quote.objects.all()
 	return render(request, 'breathe.html',  {'quotes' : quotes})
+
+def test1(request):
+	return render(request, 'test1.html')
