@@ -23,20 +23,14 @@ function typingLoop(logArray, arrayLength){
 			textObj.append(currentText[i]);
 			//textObj.append(text1[i]);
 
-
-
-			//var intro = "> IRC Log: Entry #396";
-			//var newString = objText.concat(text1[i])
-			//textObj.text(newString);
-
-			//var br = document.createElement("br");
-			//text1.appendChild(br);
 			i++;
 			typingLoop(logArray, arrayLength);
 		} else{
-			i = 0;
-			textObj.append("<br>");
-			typingLoop(logArray, arrayLength+1);
+			setTimeout(function(){
+				i = 0;
+				textObj.append("<br>");
+				typingLoop(logArray, arrayLength+1);
+			},1000);
 		}
 	}, 50)
 }
@@ -44,6 +38,7 @@ function typingLoop(logArray, arrayLength){
 // Main Js
 $(document).ready(function(){
 	var logArray = ["<Guo_Si> Hey, you know what sucks?","<TheXPhial> vaccuums","<Guo_Si> Hey, you know what sucks in a metaphorical sense?","<TheXPhial> black holes","<Guo_Si> Hey, you know what just isn't cool?","<TheXPhial> lava?"];
+	logArray.push(">");
 	//var textObj = $("p.line1");
 	//textObj.append("<br>New line<br>");
 	typingLoop(logArray, logArray.length);
@@ -99,11 +94,17 @@ $(document).ready(function(){
 		justify-content: center;
 		align-items: center;
 	}
+
+	p.line1 {
+		color: black;
+		font-family: "Lucida Console", Courier, monospace;
+	}
+
 </style>
 
 <body oncontextmenu="return false;"  style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on" onselectstart="return false;" onmousedown="return false;">
 <div class="div1">
-	<p class="line1">> IRC Log: Entry #396<br></p>
+	<p class="line1">IRC Log: Entry #396<br></p>
 </div>
 
 <div class="cover"></div>
