@@ -15,33 +15,82 @@ function typingLoop(logArray, arrayLength){
 		var textObj = $("p.line1");
 		var objText = textObj.text();
 		var currentText = logArray[arrayLength-logArray.length];
-		//document.write(currentText);
+		var formatArray = currentText.split('>',1); // find username
+
+		if(i == 0 && (arrayLength-logArray.length) != logArray.length-1){ // no extra < at end
+			textObj.append("<");
+			textObj.append(formatArray[0]); // print username
+			i = currentText.search(">");
+		}
+
+		//document.write(formatArray[1]);
+
 
 		if(i < currentText.length && arrayLength > 0){
 			//var currentText = logArray[0];
 
+			// Add text continually
 			textObj.append(currentText[i]);
-			//textObj.append(text1[i]);
+			// Create audio
+			var audioElement = document.createElement('audio');
+
+			// Select random keyboard sound
+			var rand = Math.floor(Math.random() * 4); // rand int 0-2
+			var rand2 = Math.floor(Math.random() * 3); // rand int 0-2
+
+			switch(rand){ // random audio keyboard
+				case 0:
+					audioElement.setAttribute('src', 'https://www.fesliyanstudios.com/play-mp3/10');
+					break;
+				case 1:
+					audioElement.setAttribute('src', 'https://www.fesliyanstudios.com/play-mp3/647');
+					break;
+				case 2:
+					audioElement.setAttribute('src', 'https://www.fesliyanstudios.com/play-mp3/649');
+					break;
+				case 3: // allow less keyboard noise
+					break;
+			}
+
+			switch(rand2){ // random audio volume
+				case 0:
+					audioElement.volume = 0.3;
+					break;
+				case 1:
+					audioElement.volume = 0.5;
+					break;
+				case 2:
+					audioElement.volume = 0.7;
+					break;
+			}
+
+			audioElement.currentTime = 0.1;
+			audioElement.play();
 
 			i++;
 			typingLoop(logArray, arrayLength);
 		} else{
 			setTimeout(function(){
 				i = 0;
+			//
 				textObj.append("<br>");
 				typingLoop(logArray, arrayLength+1);
 			},1000);
 		}
-	}, 50)
+	}, 90)
 }
 
 // Main Js
 $(document).ready(function(){
-	var logArray = ["<Guo_Si> Hey, you know what sucks?","<TheXPhial> vaccuums","<Guo_Si> Hey, you know what sucks in a metaphorical sense?","<TheXPhial> black holes","<Guo_Si> Hey, you know what just isn't cool?","<TheXPhial> lava?"];
+	var logArray = ["Guo_Si> Hey, you know what sucks?","TheXPhial> vaccuums","Guo_Si> Hey, you know what sucks in a metaphorical sense?","TheXPhial> black holes","Guo_Si> Hey, you know what just isn't cool?","TheXPhial> lava?"];
 	logArray.push(">");
+	setTimeout(function() {
+		typingLoop(logArray, logArray.length);
+	}, 2000);
+	//document.write(logArray[0]);
 	//var textObj = $("p.line1");
 	//textObj.append("<br>New line<br>");
-	typingLoop(logArray, logArray.length);
+
 });
 
 </script>
@@ -88,7 +137,7 @@ $(document).ready(function(){
 		height: 75%;
 		margin: auto;
 		background: rgba(60, 60, 60, 0);
-		transform: translate(0%, 10%);
+		transform: translate(0%, -10%);
 
 		display: flex;
 		justify-content: center;
