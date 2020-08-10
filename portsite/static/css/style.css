@@ -123,6 +123,11 @@ p {
 	margin-bottom: 50;
 	text-align: center;
 	background-color: #a6ffb1;
+	transition: 0.5s;
+}
+
+.box5:hover {
+	background-color: #74b57c;
 }
 
 .box6 {

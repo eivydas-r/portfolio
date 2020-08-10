@@ -6,6 +6,7 @@ class Project(models.Model):
 	description = models.TextField(blank=True)
 	project_date = models.DateField(blank=True, null=True)
 	URL_link = models.TextField(blank=True)
+	YT_link = models.TextField(blank=True)
 
 	#project = this.objects.get(id=1)
 	#if project.id == 1:
@@ -18,7 +19,10 @@ class Project(models.Model):
 class Quote(models.Model):
 	full_name = models.CharField(max_length=100, blank=False)
 	quote = models.TextField(blank=False)
-	
+
+class Log(models.Model):
+	quote = models.TextField(blank=False)
+
 
 class Details(models.Model):
 	detail_id = models.PositiveIntegerField(default=0)

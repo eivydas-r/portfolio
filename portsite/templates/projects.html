@@ -26,24 +26,28 @@
 
 				{% for proj in projs %}
 				<div class="shadow3" style="height:
-													{% if proj.URL_link %}
+													{% if proj.YT_link %}
 														{% length proj.description 445 %};
 													{% else %}
 														{% length proj.description 0 %};
 													{% endif %}">
 
 					<div class="box5" style="height:
-													{% if proj.URL_link %}
+													{% if proj.YT_link %}
 														{% length proj.description 445 %};
 													{% else %}
 														{% length proj.description 0 %};
-													{% endif %}">
+													{% endif %}"
+
+													{% if proj.URL_link %}
+														style="cursor: pointer;" onclick="window.location='{{ proj.URL_link }}';"
+													{% endif %}>
 						<div class="text3">
 							<h1>{{ proj.name }}</h1>
 							<p class="p5">{{ proj.project_date }}</p>
 							<p style="width: 760;">{{ proj.description }}</p>
-							{% if proj.URL_link %}
-								<iframe style="transform: translate(-3.5%, 0%);" width="745" height="415" src="https://www.youtube.com/embed/{{ proj.URL_link }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							{% if proj.YT_link %}
+								<iframe style="transform: translate(-3.5%, 0%);" width="745" height="415" src="https://www.youtube.com/embed/{{ proj.YT_link }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							{% endif %}
 						</div>
 					</div>
