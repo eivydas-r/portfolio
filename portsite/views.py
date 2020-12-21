@@ -4,6 +4,7 @@ from django.http import Http404
 
 from .models import Project
 from .models import Quote
+from .models import Log
 
 def home(request):
 	#return HttpResponse('<p>home view</p>')
@@ -28,4 +29,5 @@ def breathe(request):
 	return render(request, 'breathe.html',  {'quotes' : quotes})
 
 def test1(request):
-	return render(request, 'test1.html')
+	logs = Log.objects.all()
+	return render(request, 'test1.html', {'logs' : logs})

@@ -8,8 +8,12 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-var i = 0;
 
+function parseData(){
+
+}
+
+var i = 0;
 function typingLoop(logArray, arrayLength){
 	setTimeout(function() {
 		var textObj = $("p.line1");
@@ -82,6 +86,12 @@ function typingLoop(logArray, arrayLength){
 
 // Main Js
 $(document).ready(function(){
+	{{ log.quote|json_script:"logsArray" }}
+	var logsArray = JSON.parse(document.getElementById('logsArray').textContent);
+
+	document.write("test");
+
+/*
 	var logArray = ["Guo_Si> Hey, you know what sucks?","TheXPhial> vaccuums","Guo_Si> Hey, you know what sucks in a metaphorical sense?","TheXPhial> black holes","Guo_Si> Hey, you know what just isn't cool?","TheXPhial> lava?"];
 	logArray.push(">");
 	setTimeout(function() {
@@ -90,7 +100,7 @@ $(document).ready(function(){
 	//document.write(logArray[0]);
 	//var textObj = $("p.line1");
 	//textObj.append("<br>New line<br>");
-
+*/
 });
 
 </script>
