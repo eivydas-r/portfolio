@@ -28,6 +28,10 @@ def breathe(request):
 	quotes = Quote.objects.all()
 	return render(request, 'breathe.html',  {'quotes' : quotes})
 
+def candy(request):
+	logs = Log.objects.all()
+	return render(request, 'candy.html')
+
 def test1(request):
 	logs = Log.objects.all()
 	return render(request, 'test1.html', {'logs' : logs})

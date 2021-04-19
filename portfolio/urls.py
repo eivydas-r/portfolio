@@ -11,6 +11,7 @@ urlpatterns = [
 	url(r'^contact/', views.contact, name = 'contact'),
 	url(r'^breathe', views.breathe, name = 'breathe'),
 	url(r'^breathe/', views.breathe, name = 'breathe'),
+	url(r'^candy/', views.candy, name = 'candy'),
 
 	url(r'^test1/', views.test1, name = 'test1'),
 ]
