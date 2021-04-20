@@ -25,7 +25,7 @@
 			<div class="fade-in2">
 				<p class="p4">Everything on this page is generated from data extracted from my SQLite project database.</p>
 
-				{% for proj in projs %}
+				{% for proj in projs reversed %}
 				<div class="shadow3" style="height:
 													{% if proj.YT_link %}
 														{% length proj.description 445 %};
