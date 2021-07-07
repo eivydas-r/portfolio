@@ -100,7 +100,7 @@ p {
 
 .box4 {
 	width: 900px;
-	height: 460px;
+	height: inherit;
 	border: 0px solid white;
 	padding: 0px;
 	margin: 0px;
@@ -384,7 +384,7 @@ div.shadow2 {
 	margin-right: auto;
 	margin-top: 25;
 	width: 900;
-	height: 460;
+	height: 480;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
