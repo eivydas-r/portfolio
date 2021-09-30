@@ -14,4 +14,5 @@ urlpatterns = [
 	url(r'^candy/', views.candy, name = 'candy'),
 
 	url(r'^test1/', views.test1, name = 'test1'),
+	url(r'^message/', views.message, name = 'message'),
 ]

@@ -1,0 +1,17 @@
+.mainDiv {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	padding-top: 30px;
+	width: 70%;
+	font-family:serif;
+}
+
+p{
+	color: rgb(91, 91, 91);
+	font-size: 25px;
+}
+
+.tab{
+	tab-size: 8;
+}

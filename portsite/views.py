@@ -35,3 +35,6 @@ def candy(request):
 def test1(request):
 	logs = Log.objects.all()
 	return render(request, 'test1.html', {'logs' : logs})
+
+def message(request):
+	return render(request, 'message.html')
